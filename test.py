@@ -15,3 +15,7 @@ class TestMaquinaCremallera(unittest.TestCase):
     def test_tejer_cinta(self):
         self.maquina.tejerCinta(10)
         self.assertEqual(self.maquina.cintas_tejidas, 10)
+
+    def test_fabricar_cremallera(self):
+        self.maquina.fabricarCremallera(15)
+        self.assertEqual(self.maquina.cremalleras, 15)

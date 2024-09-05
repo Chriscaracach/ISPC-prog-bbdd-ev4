@@ -6,3 +6,7 @@ class MaquinaCremallera:
     def tejerCinta(self, cantidad):
         self.cintas_tejidas += cantidad
         print(f"{cantidad} cintas tejidas correctamente.")
+
+    def fabricarCremallera(self, cantidad):
+        self.cremalleras += cantidad
+        print(f"{cantidad} cremalleras fabricadas correctamente.")
