@@ -45,4 +45,4 @@ class MaquinaCremallera:
         print(f"{cantidad} cremalleras de color {color} fabricadas correctamente.")
 
     def __len__(self):
-        return self.cremalleras
+        return self.cremalleras_empaquetadas
