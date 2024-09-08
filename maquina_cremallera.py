@@ -1,5 +1,6 @@
 class MaquinaCremallera:
-    def __init__(self):
+    def __init__(self, nombre):
+        self.nombre = nombre
         self.cintas_tejidas = 0
         self.cremalleras = 0
         self.cremalleras_teñidas = 0
@@ -9,20 +10,26 @@ class MaquinaCremallera:
         self.cintas_tejidas += cantidad
         print(f"{cantidad} cintas tejidas correctamente.")
 
-    def fabricarCremallera(self, cantidad):
-        self.cremalleras += cantidad
-        print(f"{cantidad} cremalleras fabricadas correctamente.")
-
-    def teñir(self, color):
-        if not self.cintas_tejidas or not self.cremalleras:
+    def fabricarCremallera(
+        self,
+    ):
+        if not self.cintas_tejidas:
             print(
-                "Es necesario tener cintas tejidas y cremalleras para poder teñirlas. Por favor, primero teje cintas y fabrica cremalleras."
+                "Es necesario tener cintas tejidas para poder fabricar cremalleras. Por favor, primero teje cintas."
             )
         else:
-            minimo = min(self.cremalleras, self.cintas_tejidas)
-            self.cremalleras_teñidas = minimo
-            self.cintas_tejidas -= minimo
-            self.cremalleras -= minimo
+            self.cremalleras = self.cintas_tejidas
+            self.cintas_tejidas = 0
+            print(f"{self.cremalleras} cremalleras fabricadas correctamente.")
+
+    def teñir(self, color):
+        if not self.cremalleras:
+            print(
+                "Es necesario tener cremalleras fabricadas para poder teñirlas. Por favor, primero fabrica cremalleras."
+            )
+        else:
+            self.cremalleras_teñidas = self.cremalleras
+            self.cremalleras = 0
             print(
                 f"Todas las cremalleras fueron teñidas correctamente de color {color}."
             )
@@ -39,7 +46,7 @@ class MaquinaCremallera:
 
     def fabricarCremalleraCompleta(self, cantidad, color):
         self.tejerCinta(cantidad)
-        self.fabricarCremallera(cantidad)
+        self.fabricarCremallera()
         self.teñir(color)
         self.empaquetar()
         print(f"{cantidad} cremalleras de color {color} fabricadas correctamente.")
