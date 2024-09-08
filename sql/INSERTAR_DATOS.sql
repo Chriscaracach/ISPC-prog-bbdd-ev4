@@ -30,3 +30,19 @@ INSERT INTO HistorialProduccion (
     cantidad_cremalleras_teñidas,
     cantidad_cremalleras_empaquetadas
 ) VALUES (4, 4, 4, 'Blanco', 4, 4);
+INSERT INTO HistorialProduccion (
+    maquina_id,
+    cantidad_cintas_tejidas,
+    cantidad_cremalleras_fabricadas,
+    color_teñido,
+    cantidad_cremalleras_teñidas,
+    cantidad_cremalleras_empaquetadas
+) VALUES (2, 15000, 15000, 'Verde', 15000, 15000);
+INSERT INTO HistorialProduccion (
+    maquina_id,
+    cantidad_cintas_tejidas,
+    cantidad_cremalleras_fabricadas,
+    color_teñido,
+    cantidad_cremalleras_teñidas,
+    cantidad_cremalleras_empaquetadas
+) VALUES (5, 1, 1, 'Negro', 1, 1);
