@@ -51,7 +51,7 @@ class MaquinaCremallera:
         self.empaquetar()
         print(f"{cantidad} cremalleras de color {color} fabricadas correctamente.")
 
-    def visualizarDatos():
+    def visualizarDatos(self):
         print(f"Cintas tejidas: {self.cintas_tejidas}")
         print(f"Cremalleras fabricadas: {self.cremalleras}")
         print(f"Cremalleras teñidas: {self.cremalleras_teñidas}")
