@@ -31,6 +31,14 @@ class TestMaquinaCremallera(unittest.TestCase):
         self.assertEqual(self.maquina.cintas_tejidas, 0)
         self.assertEqual(self.maquina.cremalleras, 0)
 
+    def test_empaquetar(self):
+        # Éste test verifica que la función empaquetar() incrementa el atributo cremalleras_empaquetadas
+        self.maquina.tejerCinta(10)
+        self.maquina.fabricarCremallera()
+        self.maquina.teñir("rojo")
+        self.maquina.empaquetar()
+        self.assertEqual(self.maquina.cremalleras_empaquetadas, 10)
+
     def test_fabricar_cremallera_completa(self):
         # Éste test verifica que la función fabricarCremalleraCompleta() realiza todas las operaciones necesarias para fabricar un numero de cremalleras
         self.maquina.fabricarCremalleraCompleta(10, "rojo")
