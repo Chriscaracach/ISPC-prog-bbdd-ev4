@@ -9,8 +9,7 @@ class TestMaquinaCremallera(unittest.TestCase):
 
     def test_es_clase(self):
         # Éste test verifica que la variable maquina es una instancia de la clase MaquinaCremallera
-        maquina = MaquinaCremallera("maq1")
-        self.assertIsInstance(maquina, MaquinaCremallera)
+        self.assertIsInstance(self.maquina, MaquinaCremallera)
 
     def test_tejer_cinta(self):
         # Éste test verifica que la función tejerCinta() incrementa el atributo cintas_tejidas
